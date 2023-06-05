@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using RavenImageClassification;
+using RestSharp;
 
 Console.WriteLine("Hello, World!");
 
@@ -10,6 +11,6 @@ using FileStream fs = File.OpenRead(@"C:\GitHub\imagercg-waiter\backend\test2.jp
 
 request.AddFile(name: "image", getFile: ()=>fs, "image/jpeg");
 
-var response = client.Execute(request);
+var response = client.Post<ClassifierResponse>(request);
 
 var x= 1;

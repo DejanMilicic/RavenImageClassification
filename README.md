@@ -1,10 +1,19 @@
 # RavenImageClassification
 
+Integration of ML for Image Classification into RavenDB Index
+
 Based on the article https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition  
-Repo for backend API: https://github.com/hasibzunair/imagercg-waiter  
 
-Local docukerized run at: http://localhost/docs
+## How to run
+
+1. Clone https://github.com/hasibzunair/imagercg-waiter  
+2. Run dockerized backend API from https://github.com/hasibzunair/imagercg-waiter/tree/main/backend
+
+```
+docker run -dp 80:80 <image>
+```
+
+Documentation will be available at http://localhost/docs
 
 
-Consier using: https://medium.com/@unchase/how-to-generate-c-or-typescript-client-code-for-openapi-swagger-specification-d882d59e3b77  
 

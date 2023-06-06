@@ -1,6 +1,7 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 using Raven.Client.Documents;
 using RavenImageClassification;
+using RavenImageClassification.Indexes;
 using RestSharp;
 
 Console.WriteLine("Hello, World!");

@@ -1,4 +1,4 @@
-﻿namespace RavenImageClassification;
+﻿namespace RavenImageClassification.Indexes;
 
 public class ClassifierResponse
 {

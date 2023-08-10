@@ -13,12 +13,12 @@ public class Scans_ByObject : AbstractIndexCreationTask<Scan, Scans_ByObject.Ent
 
     public Scans_ByObject()
     {
-        Map = employees => from employee in employees
+        Map = scans => from scan in scans
             
-            let terms = AttachmentsFor(employee)
+            let terms = AttachmentsFor(scan)
                 .SelectMany(att => 
                     ImageClassifier.Classify(
-                        LoadAttachment(employee, att.Name).GetContentAsStream(),
+                        LoadAttachment(scan, att.Name).GetContentAsStream(),
                         att.ContentType
                     ).predictions)
                 .Where(x => x.probability > 0.5m)
